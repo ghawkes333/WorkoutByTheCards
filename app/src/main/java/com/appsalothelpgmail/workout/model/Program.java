@@ -1,4 +1,4 @@
-package com.appsalothelpgmail.workout;
+package com.appsalothelpgmail.workout.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -8,13 +8,14 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
 @Entity (tableName = "program")
+
+
 public class Program implements Parcelable {
     private String mName;
     private int[] mExerciseIds;
 
     @PrimaryKey (autoGenerate = true)
-    private int mProgramID = 0;
-    private static final String SPLICER = "~~~~~~~~~~````~`~`~`~~~~~``````";
+    public int mProgramID;
     private static String TAG = Program.class.getSimpleName();
 
     public Program(String name, int[] exerciseIds){
@@ -38,11 +39,7 @@ public class Program implements Parcelable {
 
 
     public void setName(String name) {
-        if(isValidName(name)){
-            mName = name;
-        } else {
-            Log.e(TAG, "Name is invalid");
-        }
+        mName = name;
     }
 
     public int[] getExerciseIds() {
@@ -59,10 +56,6 @@ public class Program implements Parcelable {
 
     public static boolean isValidExercises(int[] exercises){
         return exercises.length == 4 || exercises.length == 8 || exercises.length == 12;
-    }
-
-    public static boolean isValidName(String name){
-        return !name.contains(SPLICER);
     }
 
     @Override

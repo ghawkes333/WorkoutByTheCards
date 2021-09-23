@@ -1,4 +1,4 @@
-package com.appsalothelpgmail.workout;
+package com.appsalothelpgmail.workout.model;
 
 import android.os.Parcel;
 import android.os.Parcelable;
@@ -9,7 +9,7 @@ import androidx.room.PrimaryKey;
 @Entity(tableName = "exercise")
 public class Exercise implements Parcelable {
     @PrimaryKey(autoGenerate = true)
-    private int mExerciseId = 0;
+    int mExerciseId = 0;
     private String mExerciseName;
     private String[] mExerciseEquipment;
 
