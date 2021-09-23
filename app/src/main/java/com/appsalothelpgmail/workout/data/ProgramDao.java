@@ -1,4 +1,6 @@
-package com.appsalothelpgmail.workout;
+package com.appsalothelpgmail.workout.data;
+
+import com.appsalothelpgmail.workout.model.Program;
 
 import java.util.List;
 
