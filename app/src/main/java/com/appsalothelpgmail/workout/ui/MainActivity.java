@@ -1,4 +1,4 @@
-package com.appsalothelpgmail.workout;
+package com.appsalothelpgmail.workout.ui;
 
 import android.os.Bundle;
 
